@@ -16,7 +16,7 @@ bool isFull() {
 
 void enqueue(int item) {
     if(isFull()) {
-        printf("Stack is Full, couldn't enqueue\n");
+        printf("Queue is Full, couldn't enqueue\n");
     } else {
         if(isEmpty())
             front = 0;
@@ -27,6 +27,7 @@ void enqueue(int item) {
 
 int dequeue() {
     if(isEmpty()) {
+        printf("Queue is empty, couldn't dequeue!\n");
         return -1;
     } else {
         int dequeuedItem = queue[front++];
