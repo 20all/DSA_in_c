@@ -129,6 +129,16 @@ void deleteAtPosition(int position) {
     
 }
 
+int getLength() {
+    int count = 0;
+    Node *temp = head;
+    while(temp!=NULL) {
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+
 // display the elements of the linkedlist
 void display() {
     if(isEmpty()) {
@@ -144,7 +154,8 @@ void display() {
             temp = temp->next;
         }
         printf("-NULL\n");
-        printf("Head : %d  Tail : %d\n\n",head->data, tail->data);
+        printf("Head : %d  Tail : %d\n",head->data, tail->data);
+        printf("Size: %d\n\n",getLength());
     }
 }
 int main() {
